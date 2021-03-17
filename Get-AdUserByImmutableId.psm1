@@ -19,7 +19,6 @@ function Get-AdUserByImmutableId
     [CmdletBinding()]
     Param
     (
-        # Param1 help description
         [Parameter(Mandatory=$true, 
                    ValueFromPipeline=$true,
                    ValueFromPipelineByPropertyName=$true, 
@@ -39,11 +38,11 @@ function Get-AdUserByImmutableId
                 $ADUser
             }
             else{
-                Write-Warning "Usuário com ImmutableId $($ImmutableId) não localizado no AD."
+                Write-Warning "User with ImmutableId $($ImmutableId) could not be found."
             }
         }
         else{
-            Write-Warning "Atributo ImmutableId é nulo ou inválido."
+            Write-Warning "ImmutableId attribute is null or invalid."
         }
     }
 }
